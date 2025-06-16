@@ -1,0 +1,91 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+}
+
+input[type="number"], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.switch-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.switch-field label {
+  padding: 10px 14px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.switch-field input[type="radio"] {
+  display: none;
+}
+
+.switch-field input[type="radio"]:checked + label,
+.switch-field label:has(input[type="radio"]:checked) {
+  background-color: #2563eb;
+  color: white;
+  border-color: #3f0f76;
+}
+
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.result {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #10b981;
+}

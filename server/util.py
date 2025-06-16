@@ -6,12 +6,17 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
+import sys
+print("Python executable being used:", sys.executable)
+
+
 # json path
 base_path = os.path.dirname(os.path.abspath(__file__))
 json_path = os.path.join(base_path, "artifacts", "columns.json")
 json_path = os.path.normpath(json_path)
 
 #model path
+base_path = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(base_path, "artifacts", "banglore_home_prices_model.pickle")
 model_path = os.path.normpath(model_path)
 
