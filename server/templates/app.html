@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bangalore Home Price Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Bangalore Home Price Predictor 🏠</h1>
+    <form class="form">
+	  <h2>Area (Square Feet) <span id="sqftValue">Ex : 1000</span> sqft</h2>
+    <div class="area-control">
+      <button type="button" onclick="changeSqft(-1)">−</button>
+      <input type="range" id="uiSqft" min="100" max="10000" step="1" value="1000" oninput="updateSqftValue()">
+      <button type="button" onclick="changeSqft(1)">+</button>
+    </div>
+    <div id="sqftDisplay">Selected: <span id="sqftValue">1000</span> sqft</div>
+
+      <label>BHK</label>
+      <div class="switch-field" id="bhk-options">
+        <label><input type="radio" name="uiBHK" value="1" />1</label>
+        <label><input type="radio" name="uiBHK" value="2" checked />2</label>
+        <label><input type="radio" name="uiBHK" value="3" />3</label>
+        <label><input type="radio" name="uiBHK" value="4" />4</label>
+        <label><input type="radio" name="uiBHK" value="5" />5</label>
+      </div>
+
+      <label>Bathrooms</label>
+      <div class="switch-field" id="bathroom-options">
+        <label><input type="radio" name="uiBathrooms" value="1" />1</label>
+        <label><input type="radio" name="uiBathrooms" value="2" checked />2</label>
+        <label><input type="radio" name="uiBathrooms" value="3" />3</label>
+        <label><input type="radio" name="uiBathrooms" value="4" />4</label>
+        <label><input type="radio" name="uiBathrooms" value="5" />5</label>
+      </div>
+
+      <label for="uiLocations">Select Location</label>
+      <select id="uiLocations">
+        <option disabled selected>Loading locations...</option>
+      </select>
+
+      <button type="button" onclick="onClickedEstimatePrice()">Estimate Price</button>
+      <div id="uiEstimatedPrice" class="result"></div>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
