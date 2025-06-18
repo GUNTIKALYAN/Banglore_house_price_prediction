@@ -1,0 +1,183 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); }
+}
+
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 35px;
+  font-size: 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.area-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.area-control button {
+  background-color: #2563eb;
+  border: none;
+  padding: 10px;
+  width: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.area-control button:hover {
+  background-color: #d1d5db;
+}
+
+#uiSqft:hover {
+  cursor: pointer;
+}
+
+
+
+#sqftDisplay {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+
+label {
+  font-weight: 600;
+  margin-top: 20px;
+  display: block;
+  font-size: 1rem;
+}
+
+
+input[type="number"], select {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+
+input[type="range"] {
+  width: 100%;
+}
+
+
+.switch-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.switch-field label {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.switch-field input[type="radio"] {
+  display: none;
+}
+
+.switch-field input[type="radio"]:checked + label,
+.switch-field label:has(input[type="radio"]:checked) {
+  background-color: #2563eb;
+  color: white;
+  border-color: #1e40af;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Result Box */
+.result {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #10b981;
+  animation: fadeIn 1s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .result {
+    font-size: 1.3rem;
+  }
+}
