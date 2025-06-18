@@ -85,7 +85,6 @@ def bot():
         except Exception as e:
             reply = f"❌ Gemini connection error: {e}"
 
-    # Return Twilio-compatible response
     twilio_resp = MessagingResponse()
     twilio_resp.message(reply)
     return str(twilio_resp)
